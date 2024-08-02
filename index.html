@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./img/icon.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <img class="img-icon"  src="./img/Logo.png" alt="Icono">
+        <h1>Challenge encriptador de texto</h1>
+    </header>
+    <main class="container">
+        <section class="container-section-principal">
+            <textarea id="inputText" class="inputText" cols="30" rows="10" placeholder="Ingrese el texto aquí" oninput="validateInput()"></textarea>
+            <div class="info">
+                <img class="img-icon-info" src="./img/info.png" alt="Icono de alerta informacion importante">
+                <p class="information">No se permite el ingreso de mayúsculas, tampoco caracteres especiales.</p>    
+            </div>
+            <div class="buttons">
+                <button>Encriptar!</button>
+                <button>Desencriptar!</button>
+                <button>Limpiar</button>
+            </div>
+        </section>
+        <section class="container-section-secundaria">
+            <textarea id="outputText" class="outputText" cols="20" rows="10" readonly></textarea>
+            <span id="notification" class="notification">.</span>
+            <button>Copiar Texto</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Yanina Aranda</p>
+        <p>01/ 08/ 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
