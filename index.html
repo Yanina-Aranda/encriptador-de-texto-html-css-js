@@ -20,15 +20,15 @@
                 <p class="information">No se permite el ingreso de mayúsculas, tampoco caracteres especiales.</p>    
             </div>
             <div class="buttons">
-                <button>Encriptar!</button>
-                <button>Desencriptar!</button>
-                <button>Limpiar</button>
+                <button onclick="encryptText()">Encriptar!</button>
+                <button onclick="decryptText()">Desencriptar!</button>
+                <button onclick="limpiarTextareas()">Limpiar</button>
             </div>
         </section>
         <section class="container-section-secundaria">
             <textarea id="outputText" class="outputText" cols="20" rows="10" readonly></textarea>
             <span id="notification" class="notification">.</span>
-            <button>Copiar Texto</button>
+            <button onclick="copiarTexto()">Copiar Texto</button>
         </section>
     </main>
     <footer class="footer">
