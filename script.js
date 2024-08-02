@@ -1,9 +1,11 @@
 function validateInput() {
     const inputText = document.getElementById('inputText');
+    //Utilizando expresiones regulares para verificar que no se ingrese mayusculas ni caracteres especiales
     inputText.value = inputText.value.replace(/[^a-z]/g, '');
 }
 
 function encryptText() {
+    //Obtener los elementos textarea
     const inputText = document.getElementById('inputText').value;
     const outputText = document.getElementById('outputText');
 
@@ -13,7 +15,8 @@ function encryptText() {
     }
 
     let encryptedText = '';
-
+    //Recorremos la cadena de texto encriptando cada vocal con su correspondiente texto encriptado
+    //las letras que no sean vocales quedan sin modificar
     for (let i = 0; i < inputText.length; i++) {
         switch (inputText[i]) {
             case 'a':
@@ -49,7 +52,8 @@ function decryptText() {
         outputText.value = '';
         return;
     }
-
+    //Cada letra encriptada es reemplazada por su caracter original
+    //utilizando expresiones regulares en el método replace para buscar patrones en la cadena
     let decryptedText = inputText
         .replace(/ai/g, 'a')
         .replace(/enter/g, 'e')
@@ -72,12 +76,13 @@ async function copiarTexto() {
     }
 
     try {
+        //Copiando texto usando el API del portapapeles 'navigator.clipboard.writeText'
         await navigator.clipboard.writeText(outputText.value);
         outputText.value = '';
         outputText.classList.remove('no-background');
         notification.textContent = 'Texto copiado al portapapeles';
         showNotification()
-    } catch (err) {
+    } catch (err) {//En caso de que ocurra un error será capturado por el catch
         notification.textContent = 'Error al copiar el texto';
         showNotification()
     }
