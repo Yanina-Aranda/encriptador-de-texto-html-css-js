@@ -124,3 +124,35 @@ button:hover {
     padding: 20px;
     text-align: center;
 }
+
+@media (max-width: 1200px) {
+
+    .header{
+         padding: 5%;  
+    }
+    
+    h1 {
+        font-size: 1.3em;
+    }
+    
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-section-principal {
+        width: auto;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    .container-section-secundaria {
+        width: auto;
+    }
+
+    .outputText {
+        width: 70%;
+    }
+}
