@@ -99,7 +99,7 @@ button:hover {
 }
 
 .outputText {
-    background-image: url('/img/Muneco.png');
+    background-image: url('../img/Muneco.png');
     background-repeat: no-repeat;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 50%;
